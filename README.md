@@ -31,7 +31,8 @@ The report shows class Example1 has 100% coverage whilst Example2 (which is cove
 
 ![img.png](default-reporting-coverage-report.png)
 
-##### Use merge goal to get JaCoCo to report on coverage provided by other projects
+### Using merge goal to get JaCoCo to report on coverage provided by other projects
+
 
 To get jacoco to report coverage provided by other projects. We need to merge all the jacoco.exec files we have
 
