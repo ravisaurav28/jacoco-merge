@@ -55,6 +55,38 @@
           <target>8</target>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.8</version>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+            <!-- we won't do custom configuration as default already update argLine so that surefire runs with jacoco as agent -->
+          </execution>
+        </executions>
+
+
+        <configuration>
+
+          <!-- start : this is needed if we want to run the merge goal -->
+          <fileSets>
+            <fileSet>
+              <directory>${project.build.directory}</directory>
+              <includes>
+                <include>*.exec</include>
+              </includes>
+            </fileSet>
+          </fileSets>
+          <!-- end required config for merge goal  -->
+
+        </configuration>
+
+
+      </plugin>
     </plugins>
 
   </build>
