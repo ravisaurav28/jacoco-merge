@@ -1,0 +1,12 @@
+<project >
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.choudhury.jacoco.merge</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>project1</artifactId>
+
+</project>
