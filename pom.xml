@@ -65,10 +65,21 @@
             <goals>
               <goal>prepare-agent</goal>
             </goals>
+            <configuration>
+              <destFile>${project.build.directory}/${project.artifactId}.exec</destFile>
+            </configuration>
             <!-- we won't do custom configuration as default already update argLine so that surefire runs with jacoco as agent -->
           </execution>
+          <execution>
+            <id>report</id>
+            <goals>
+              <goal>report</goal>
+            </goals>
+            <configuration>
+              <dataFile>${project.build.directory}/${project.artifactId}.exec</dataFile>
+            </configuration>
+          </execution>
         </executions>
-
 
         <configuration>
 
